@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_013829) do
+ActiveRecord::Schema.define(version: 2019_03_08_234732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,25 @@ ActiveRecord::Schema.define(version: 2019_02_27_013829) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.bigint "charity_id"
+    t.bigint "project_id"
+    t.string "caption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_id"], name: "index_posts_on_charity_id"
+    t.index ["project_id"], name: "index_posts_on_project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.bigint "charity_id", null: false
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_id"], name: "index_projects_on_charity_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -37,4 +56,7 @@ ActiveRecord::Schema.define(version: 2019_02_27_013829) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "posts", "charities"
+  add_foreign_key "posts", "projects"
+  add_foreign_key "projects", "charities"
 end
