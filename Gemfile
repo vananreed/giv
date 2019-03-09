@@ -18,6 +18,9 @@ gem 'webpacker'
 gem 'react-rails'
 gem 'simple_form', '~> 4.1.0'
 gem 'devise', '~> 4.6.1'
+gem 'font-awesome-sass', '~> 5.0.9'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 
 group :development, :test do
   gem 'listen'

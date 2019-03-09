@@ -1,0 +1,13 @@
+.navbar {
+  font-family: $body-font;
+  color: $green;
+  height: 6vh;
+  border-bottom: 1px solid $green;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 23px;
+}
