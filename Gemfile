@@ -17,6 +17,7 @@ gem 'redis', '~> 4.0'
 gem 'webpacker'
 gem 'react-rails'
 gem 'simple_form', '~> 4.1.0'
+gem 'devise', '~> 4.6.1'
 
 group :development, :test do
   gem 'listen'
