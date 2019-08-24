@@ -1,0 +1,11 @@
+<div class="post">
+  <div class="charity-name"><%= post.charity.name %></div>
+  <div class="caption"><%= post.caption %></div>
+  <div class="donations-count"><%= post.donations.count %></div>
+  <div class="comments">
+  <% post.comments.each do |comment| %>
+    <div class="comment-text"><%= comment.text %></div>
+    <div class="comment-username"><%= comment.user.username %></div>
+  <% end %>
+  </div>
+</div>
