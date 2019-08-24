@@ -1,0 +1,8 @@
+.post
+  .charity-name= post.charity.name
+  .caption= post.caption
+  .donations-count= post.donations.count
+  .comments
+    - post.comments.each do |comment|
+      .comment-text= comment.text
+      .comment-username= comment.user.username
