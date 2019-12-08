@@ -1,6 +1,6 @@
-RSpec.describe 'Charity', type: :model do
+RSpec.describe Charity, type: :model do
 
-  context 'validations' do
-    it { is_expected.to validate_presence_of(:name) }
+  describe 'validations' do
+    it { should validate_presence_of(:name) }
   end
 end
