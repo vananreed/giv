@@ -22,8 +22,8 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'haml-rails', '~> 2.0'
-gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
 
 group :development, :test do
   gem 'dotenv-rails'
@@ -35,4 +35,8 @@ group :development, :test do
   gem 'chromedriver-helper', '~> 2.1'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~> 4.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 4.1'
 end
