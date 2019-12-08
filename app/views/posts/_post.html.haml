@@ -1,5 +1,7 @@
 .post
-  .charity-name= post.charity.name
+  .charity-name= post.charity&.name
+  .attachments
+  .photo= cl_image_tag post.photo, height: 300, width: 400, crop: :fill
   .caption= post.caption
   .donations-count= post.donations.count
   .comments
